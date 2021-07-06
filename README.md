@@ -1,9 +1,13 @@
 # lipreading
 
-A reporitory for lipreading on the lipreading in the wild (LRW) dataset using the SpotFast Network. 
+A reporitory for lipreading on the lipreading in the wild (LRW) dataset using the SpotFast Networks (ICONIP 2020). 
+The SpotFast Networks utilize temporal window, two input pathways with lateral connections and two memory-augmented transformers to recognize word-level lip movements. The test accuracy is 84.4%. For comparisons with other methods, please consider [PapersWithCodes](https://paperswithcode.com/sota/lipreading-on-lip-reading-in-the-wild).
 
 Wiriyathammabhum, Peratham. "SpotFast Networks with Memory Augmented Lateral Transformers for Lipreading." 
 International Conference on Neural Information Processing. Springer, Cham, 2020.
+
+## Citation
+A link to the [paper](https://link.springer.com/chapter/10.1007/978-3-030-63820-7_63) and its [ArXiv](https://arxiv.org/abs/2005.10903).
 
 ```bixtex
 @inproceedings{wiriyathammabhum2020spotfast,
@@ -14,5 +18,4 @@ International Conference on Neural Information Processing. Springer, Cham, 2020.
   year={2020},
   organization={Springer}
 }
-
-'''
+```
