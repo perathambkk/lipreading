@@ -1,0 +1,309 @@
++*In[1]:*+
+[source, ipython3]
+----
+%matplotlib inline
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from PIL import Image, ImageDraw
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+import os, os.path 
+import sys
+cwd = os.getcwd()
+from os.path import expanduser
+hp = expanduser("~")
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+codebasepath = '/cfarhomes/peratham/datapath/lrw/boundary_stats/'
+os.chdir(codebasepath)
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+import pickle,yaml
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+filepath = '/cfarhomes/peratham/datapath/lrw/boundary_stats/boundary_stats.p'
+with open(filepath,'rb') as fp:
+    rdict = pickle.load(fp)
+----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+len(rdict.keys())
+----
+
+
++*Out[6]:*+
+----488766----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+import pandas as pd
+import numpy as np
+----
+
+
++*In[17]:*+
+[source, ipython3]
+----
+import seaborn as sns
+import statistics
+----
+
+
++*In[39]:*+
+[source, ipython3]
+----
+dlist = [rdict[k]['num_frames'] for k in rdict.keys()]
+----
+
+
++*In[40]:*+
+[source, ipython3]
+----
+max(dlist)
+----
+
+
++*Out[40]:*+
+----20----
+
+
++*In[41]:*+
+[source, ipython3]
+----
+min(dlist)
+----
+
+
++*Out[41]:*+
+----2----
+
+
++*In[42]:*+
+[source, ipython3]
+----
+statistics.mean(dlist)
+----
+
+
++*Out[42]:*+
+----10.59226910218796----
+
+
++*In[43]:*+
+[source, ipython3]
+----
+statistics.stdev(dlist)
+----
+
+
++*Out[43]:*+
+----3.1965278737111635----
+
+
++*In[20]:*+
+[source, ipython3]
+----
+rkeys = list(rdict.keys())
+----
+
+
++*In[21]:*+
+[source, ipython3]
+----
+rkeys[0]
+----
+
+
++*Out[21]:*+
+----'/cfarhomes/peratham/datapath/lrw/lipread_mp4/ABOUT/train/ABOUT_00256.txt'----
+
+
++*In[22]:*+
+[source, ipython3]
+----
+rdict[rkeys[0]]
+----
+
+
++*Out[22]:*+
+----{'duration': 0.3, 'fps': 25.0, 'num_frames': 8}----
+
+
++*In[23]:*+
+[source, ipython3]
+----
+fpslist = [rdict[k]['fps'] for k in rdict.keys()]
+----
+
+
++*In[24]:*+
+[source, ipython3]
+----
+min(fpslist)
+----
+
+
++*Out[24]:*+
+----25.0----
+
+
++*In[25]:*+
+[source, ipython3]
+----
+max(fpslist)
+----
+
+
++*Out[25]:*+
+----25.0----
+
+
++*In[26]:*+
+[source, ipython3]
+----
+statistics.mean(fpslist)
+----
+
+
++*Out[26]:*+
+----25.0----
+
+
++*In[34]:*+
+[source, ipython3]
+----
+dtlist = [rdict[k]['duration'] for k in rdict.keys()]
+----
+
+
++*In[35]:*+
+[source, ipython3]
+----
+min(dtlist)
+----
+
+
++*Out[35]:*+
+----0.09----
+
+
++*In[36]:*+
+[source, ipython3]
+----
+max(dtlist)
+----
+
+
++*Out[36]:*+
+----0.8----
+
+
++*In[37]:*+
+[source, ipython3]
+----
+statistics.mean(dtlist)
+----
+
+
++*Out[37]:*+
+----0.42366207960455515----
+
+
++*In[38]:*+
+[source, ipython3]
+----
+statistics.stdev(dtlist)
+----
+
+
++*Out[38]:*+
+----0.12723497574949436----
+
+
++*In[45]:*+
+[source, ipython3]
+----
+dtlist.index(min(dtlist))
+----
+
+
++*Out[45]:*+
+----423471----
+
+
++*In[46]:*+
+[source, ipython3]
+----
+rkeys[423471]
+----
+
+
++*Out[46]:*+
+----'/cfarhomes/peratham/datapath/lrw/lipread_mp4/THEIR/train/THEIR_00510.txt'----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+import operator
+min_index, min_value = min(enumerate(values), key=operator.itemgetter(1))
+max_index, max_value = max(enumerate(values), key=operator.itemgetter(1))
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+import operator
+min_index, min_value = min(enumerate(values), key=lambda p: p[1])
+max_index, max_value = max(enumerate(values), key=lambda p: p[1])
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----

@@ -1,0 +1,33 @@
+# .bashrc.mine
+# modules
+module load cuda/9.0.176
+module load cudnn/v7.0.5
+module load matlab/2017b
+module load ffmpeg
+module load gcc/5.4.0
+module load tmux
+module load cmake
+module load eigen
+module load sox
+module load flac
+#module load Python3/3.6.4
+#module load protobuf/3.5.1
+
+# cudnn
+export CUDNN_INCLUDE_DIR="/opt/common/cudnn/cudnn-8.0-6.0/include" 
+export CUDNN_LIBRARY="/opt/common/cudnn/cudnn-8.0-6.0/lib64/libcudnn.so"
+
+# anaconda
+
+# common-anaconda
+export PATH="/cfarhomes/peratham/swpath/lrconda3/bin:$PATH"
+
+# nccl
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cfarhomes/peratham/swpath/nccl_2.1.15-1+cuda9.0_x86_64/lib
+
+# sox
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/local/stow/sox-14.4.2/lib
+
+# bin
+#export PATH="/vulcan/scratch/peratham/bin:$PATH"
+

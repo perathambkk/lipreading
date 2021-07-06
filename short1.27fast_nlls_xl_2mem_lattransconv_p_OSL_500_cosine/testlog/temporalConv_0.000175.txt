@@ -1,0 +1,6 @@
+using GPU
+*** model has been successfully loaded! ***
+val Epoch:	 0	Loss: 0.7212	Acc:0.7998
+
+test Epoch:	 0	Loss: 0.7429	Acc:0.7930
+
