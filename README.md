@@ -5,7 +5,7 @@ A reporitory for lipreading on the lipreading in the wild (LRW) dataset using th
 Wiriyathammabhum, Peratham. "SpotFast Networks with Memory Augmented Lateral Transformers for Lipreading." 
 International Conference on Neural Information Processing. Springer, Cham, 2020.
 
-'''bixtex
+```bixtex
 @inproceedings{wiriyathammabhum2020spotfast,
   title={SpotFast Networks with Memory Augmented Lateral Transformers for Lipreading},
   author={Wiriyathammabhum, Peratham},
