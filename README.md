@@ -1,4 +1,4 @@
-# lipreading
+# Lipreading
 
 A reporitory for lipreading on the lipreading in the wild (LRW) dataset using the SpotFast Networks (ICONIP 2020). 
 The SpotFast Networks utilize temporal window, two input pathways with lateral connections and two memory-augmented transformers to recognize word-level lip movements. The test accuracy is 84.4%. For comparisons with other methods, please consider [PapersWithCodes](https://paperswithcode.com/sota/lipreading-on-lip-reading-in-the-wild).
