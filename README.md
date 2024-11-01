@@ -11,7 +11,7 @@ International Conference on Neural Information Processing. Springer, Cham, 2020.
 ## Citation
 A link to the [paper](https://link.springer.com/chapter/10.1007/978-3-030-63820-7_63) and its [ArXiv](https://arxiv.org/abs/2005.10903).
 
-# Cite this paper
+### Cite this paper
 
 Wiriyathammabhum, P. (2020). SpotFast Networks with Memory Augmented Lateral Transformers for Lipreading. In: Yang, H., Pasupa, K., Leung, A.CS., Kwok, J.T., Chan, J.H., King, I. (eds) Neural Information Processing. ICONIP 2020. Communications in Computer and Information Science, vol 1332. Springer, Cham. https://doi.org/10.1007/978-3-030-63820-7_63
 
